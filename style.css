@@ -1,0 +1,170 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --navy:#0f2542;
+    --lightnavy:#194072;
+    --blue: #7dc4e7;
+    --lightblue: #3be6ec;
+    --grey: #62605b;
+    --darkgrey:#2d2b2b;
+    --white: #ffffff;
+}
+
+@font-face {
+    font-family: signature;
+    src: url(fonts/signature-font/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: righteous;
+    src: url(fonts/Righteous/Righteous-Regular.ttf);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lightnavy);
+    height: 15vh;
+    box-shadow: 0 0 0 2px var(--navy);
+    position: relative;
+}
+
+.name {
+    font-family: signature;
+    font-weight: 800;
+    font-size: 3em;
+    margin: .5em;
+    color: var(--white);
+}
+
+.last-name {
+    padding-left: .8em;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-links li {
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+.nav-links li a {
+    font-family: righteous;
+    text-decoration: none;
+    color: var(--white);
+    padding: .5em;
+}
+
+.nav-links li a:hover {
+    color: var(--lightblue);
+    text-decoration:underline;
+}
+
+.home {
+    background-color: var(--lightnavy);
+    height: 85vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home-heading, .home-info{
+    color: var(--white);
+    font-family: righteous;
+    font-size: 2.5em;
+}
+
+.home-info {
+    display: block;
+    border-left: 2px solid var(--white);
+    padding-left: 10px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 
+    0 0 0 10px var(--lightnavy),
+    0 0 0 16px var(--lightblue),
+    0 0 0 22px rgb(241, 236, 236);
+}
+
+.headshot {
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+    align-items: center;
+    font-family: righteous;
+    font-size: 3em;
+    gap: 30px;
+}
+
+.about-info {
+    display: block;
+    max-width: 90ch;
+    font-family: righteous;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.paragraph {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: var(--navy);
+}
