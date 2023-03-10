@@ -154,7 +154,7 @@ table {
 
 .about-info {
     display: block;
-    max-width: 90ch;
+    max-width: 95ch;
     font-family: righteous;
     display: flex;
     flex-direction: column;
