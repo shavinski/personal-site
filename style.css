@@ -52,6 +52,10 @@ table {
     --white: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: signature;
     src: url(fonts/signature-font/DancingScript-VariableFont_wght.ttf);
@@ -126,13 +130,13 @@ table {
     padding-left: 10px;
 }
 
-.about{
+#about{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.about img {
+#about img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
