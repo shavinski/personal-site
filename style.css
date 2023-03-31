@@ -255,8 +255,55 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 1em; */
+    gap: 20px;
 }
+
+.project-container {
+  background-color: var(--white);
+  width: 50vw;
+  height: 25vh;  
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.project-left {
+  height: 80%;
+  width: 20%;
+  background-color: var(--purple-white);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.project-left img {
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--purple-main);
+  border-radius: 10px;
+}
+
+.project-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 80%;
+  width: 70%;
+  font-family: righteous;
+}
+
+.about-project-title {
+  font-size: 1.4em;
+  color: var(--purple-main);
+}
+
+.js {
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;
+}
+
+
+
 
 .projects-container-top, .projects-container-bottom {
     display: flex;
@@ -423,12 +470,12 @@ html {
 }
 
 .linkedin, .github {
-    transition: .8s;
+    transition: .3s ease-out;
 }
 
 .linkedin:hover, .github:hover {
-    transform: scale(.80);
-    transition: .8s;
+    transform: scale(.95);
+    transition: .3s ease-in;
 }
 
 .contact-heading {
