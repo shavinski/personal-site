@@ -82,11 +82,55 @@ html {
 }
 
 .navbar {
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--purple-main);
-    height: 15vh;
+  }
+  
+  .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .nav-item {
+      padding: 1em;
+      font-size: 1.5em;
+  }
+  
+  .nav-link {
+    font-family: righteous;
+    text-decoration: none;
+    color: var(--yellow-accent);
+    transition: .4s;
+    padding: .3em;
+    border-radius: 10px;
+    color: var(--yellow-accent);
+    transition: .4s ease-out;
+}
+
+.nav-link:hover {
+    color: var(--purple-main);
+    background-color: var(--yellow-accent);
+    transition: .4s ease-in;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--yellow-accent);
 }
 
 .name {
@@ -104,14 +148,18 @@ html {
 }
 
 .jakob {
-    transition: .6s;
-    padding-left: 10px;
-    padding-right: 10px;
+    transition: .6s ease-in;
+}
+
+.first-name span {
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .jakob:hover {
     transform: scale(1.6);
-    transition: .6s;
+    color: var(--yellow-accent);
+    transition: .6s ease-out;
     cursor: pointer;
 }
 
@@ -119,32 +167,6 @@ html {
     font-family: orbitron;
     letter-spacing: 3px;
     color: var(--yellow-accent);
-}
-
-.nav-links ul {
-    display: flex;
-    flex-direction: row;
-}
-
-.nav-links li {
-    padding: 1em;
-    font-size: 1.5em;
-}
-
-.nav-links li a {
-    font-family: righteous;
-    text-decoration: none;
-    color: var(--yellow-accent);
-    transition: .4s;
-    padding: .3em;
-}
-
-.nav-links li a:hover {
-    color: var(--white);
-}
-
-.hamburger-icon {
-    display: none;
 }
 
 #home {
@@ -440,14 +462,42 @@ html {
   }
 
 @media all and (max-width: 1201px)  {
-  .nav-links {
-    display: none;
+  .nav-menu {
+    position: fixed;
+    left: -200%;
+    top: 12vh;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--purple-main);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
   }
 
-  .hamburger-icon{
-    display: inline-block;
-    color: white;
-    margin: 1em;
+  .nav-item {
+    margin: 16px 0;
+    font-size: 1.5em;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg)
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg)
   }
 
   #about {
@@ -625,11 +675,12 @@ html {
       }
 
       #contact {
-        /* height: 17vh; */
+        height: 18vh;
+        gap: 40px;
       }
 
       .contact-first, .contact-second {
-        font-size: 1em;
+        font-size: 1.5em;
       }
 
       .contact-left {
