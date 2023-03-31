@@ -50,6 +50,11 @@ table {
     --grey: #62605b;
     --darkgrey:#2d2b2b;
     --white: #ffffff;
+    --purple-main: #652ed3;
+    --purple-secondary: #925cfd;
+    --purple-white: #ad84ff;
+    --yellow-accent: #CDF614;
+    --yellow-second: #e0f8a7;
 }
 
 html {
@@ -66,26 +71,54 @@ html {
     src: url(fonts/Righteous/Righteous-Regular.ttf);
 }
 
+@font-face {
+    font-family: barlow;
+    src: url(fonts/Barlow/Barlow-Bold.ttf);
+}
+
+@font-face {
+    font-family: orbitron;
+    src: url(fonts/Orbitron/Orbitron-VariableFont_wght.ttf)
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--navy);
+    background-color: var(--purple-main);
     height: 15vh;
-    position: relative;
 }
 
 .name {
-    font-family: signature;
-    font-weight: 800;
-    font-size: 3em;
-    margin: .5em;
-    color: var(--white);
-    transform: rotate(-15deg)
+    display: flex;
+    flex-direction: column;
+    font-size: 3.2em;
+    margin: 1em;
+}
+
+.first-name {
+    display: flex;
+    justify-content: space-between;
+    font-family: righteous;
+    color: var(--white); 
+}
+
+.jakob {
+    transition: .6s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.jakob:hover {
+    transform: scale(1.6);
+    transition: .6s;
+    cursor: pointer;
 }
 
 .last-name {
-    padding-left: 1.2em;
+    font-family: orbitron;
+    letter-spacing: 3px;
+    color: var(--yellow-accent);
 }
 
 .nav-links ul {
@@ -101,124 +134,231 @@ html {
 .nav-links li a {
     font-family: righteous;
     text-decoration: none;
-    color: var(--white);
-    padding: .5em;
+    color: var(--yellow-accent);
+    transition: .4s;
+    padding: .3em;
 }
 
 .nav-links li a:hover {
-    color: var(--lightblue);
-    text-decoration:underline;
+    color: var(--white);
 }
 
 #home {
-    background-color: var(--lightnavy);
+    /* background-color: var(--purple-main); */
+    background-image: linear-gradient(var(--purple-main), var(--purple-secondary));
     height: 85vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.home-heading, .home-info{
+.developer-text, .shavinski {
+    color: var(--yellow-accent);
+}
+
+.home-left, .home-right{
     color: var(--white);
     font-family: righteous;
     font-size: 2.5em;
 }
 
-.home-info {
+.home-right {
     display: block;
-    border-left: 2px solid var(--white);
+    border-left: 4px solid var(--yellow-accent);
     padding-left: 10px;
 }
 
 #about{
     display: flex;
-    flex-direction: column;
+    background-color: var(--purple-secondary);
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     height: 100vh;
 }
 
-#about img {
-    width: 300px;
-    height: 300px;
+.left-photo {
+    background-image: url(images/6423e2ffc61c5817ddad6270-DeepAgency.png);
+    width: 400px;
+    height: 400px;
+    background-position: center; 
+    background-size: cover;
     border-radius: 50%;
     box-shadow: 
-    0 0 0 10px var(--lightnavy),
-    0 0 0 16px var(--lightblue),
-    0 0 0 22px rgb(241, 236, 236);
+    0 0 0 4px var(--yellow-accent),
+    0 0 0 10px var(--yellow-second),
+    0 0 0 16px white;
 }
 
-.headshot {
+
+.right-personal {
     display: flex;
-    padding: 1.2em;
-    justify-content: space-between;
-    align-items: center;
-    font-family: righteous;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-me, .project-header {
+    color: var(--yellow-accent);
+    font-family: orbitron;
     font-size: 3em;
-    gap: 30px;
+    font-weight: 900;
 }
 
 .about-info {
-    max-width: 95ch;
-    font-family: righteous;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: righteous;
     gap: 20px;
+    max-width: 95ch;
+
 }
 
+
 .paragraph {
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.5em;
-    color: var(--navy);
+    color: white;
+}
+
+
+#projects {
+    height: 100vh;
+    background-color: var(--purple-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1em; */
+}
+
+.projects-container-top, .projects-container-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    gap: 2em;
+}
+
+.project1, .project2, .project3, .project4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 25vw;
+    height: 35vh;
+    background-color: var(--white);
+    border: 1px solid black;
+    border-radius: 15px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s;
+}
+
+.button-projects {
+    display: none;
+    background-color: var(--yellow-accent);
+    color: var(--purple-secondary);
+    padding: 10px;
+    font-size: 1.3em;
+    font-family: righteous;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    width: 9em;
+    transition: .8s;
+}
+
+.project1:hover, .project2:hover, .project3:hover, .project4:hover {
+    cursor: pointer;
+    transform: scale(.9);
+    transition: .5s;
+}
+
+.button-projects:hover {
+    background-color: var(--purple-main);
+    color: white;
+    cursor: pointer;
+}
+
+.project1:hover .button-projects, .project2:hover .button-projects, .project3:hover .button-projects, .project4:hover .button-projects {
+    display: inline-block;
+    transition: 1s;
+}
+
+.project1 {
+    background-image: url(images/project-photos/memorygame-photo.PNG);
+}
+
+.project2{
+    background-image: url(images/project-photos/meme-photo.PNG);
+}
+
+.project3 {
+    background-image: url(images/project-photos/etch-photo.PNG);
+}
+
+.project4 {
+    background-image: url(images/project-photos/calculator=photo.PNG);
 }
 
 #resume {
     height: 100vh;
-    background-color: var(--blue);
+    background-image:linear-gradient(var(--purple-secondary) ,var(--purple-main));
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
 }
 
 #resume-photo {
-    height: 90vh;
+    height: 85vh;
     margin: 2em;
-    box-shadow: 0px 10px 20px 2px var(--darkgrey);
+    box-shadow: 0px 5px 15px 5px var(--purple-white);
 }
 
-.button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.button, #download-bttn {
-    background-color: var(--lightnavy);
-    font-size: 1em;
-    font-family: righteous;
+.button {
+    background-color: var(--yellow-accent);
+    color: var(--purple-secondary);
     padding: 10px;
+    font-size: 1.3em;
+    font-family: righteous;
     border-radius: 10px;
     text-decoration: none;
-    color: var(--white);
     text-align: center;
     width: 9em;
+    transition: .8s;
 }
 
-.button:hover, #download-bttn {
-    background-color: var(--navy);
+.button:hover {
+    background-color: var(--purple-main);
     color: white;
     cursor: pointer;
 }
 
 #contact {
     height: 15vh;
-    background-color: var(--blue);
+    background-color: var(--purple-main);
     font-family: righteous;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
     padding: 1em;
+}
+
+.contact-first, .contact-second {
+    font-size: 3em;
+}
+
+.contact-first {
+    color: var(--white);
+}
+
+.contact-second {
+    color: var(--yellow-accent);
 }
 
 .contact-info{
@@ -233,10 +373,35 @@ html {
     flex-direction: row;
     gap: 20px;
     font-size: 1.2em;
+    color: var(--white);
+}
+
+.number, .address {
+    color: var(--yellow-accent);
+}
+
+.filter-white {
+    filter: invert(97%) sepia(41%) saturate(4895%) hue-rotate(11deg) brightness(101%) contrast(92%);
+    height: 50px;
+    width: 50px;
+    transition: .5s;
 }
 
 .contact-right {
-    border-left: 2px solid var(--darkgrey);
+    display: flex;
+    flex-direction: row;
+    border-left: 2px solid var(--yellow-accent);
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.linkedin, .github {
+    transition: .8s;
+}
+
+.linkedin:hover, .github:hover {
+    transform: scale(.80);
+    transition: .8s;
 }
 
 .contact-heading {
