@@ -1,119 +1,207 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 :root {
-    --grey: #62605b;
-    --darkgrey:#2d2b2b;
-    --white: #ffffff;
-    --purple-main: #652ed3;
-    --purple-secondary: #925cfd;
-    --purple-white: #ad84ff;
-    --yellow-accent: #CDF614;
-    --yellow-second: #e0f8a7;
+  --grey: #62605b;
+  --darkgrey: #2d2b2b;
+  --white: #ffffff;
+  --purple-main: #652ed3;
+  --purple-secondary: #925cfd;
+  --purple-white: #ad84ff;
+  --yellow-accent: #CDF614;
+  --yellow-second: #e0f8a7;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-    font-family: signature;
-    src: url(fonts/signature-font/DancingScript-VariableFont_wght.ttf);
+  font-family: signature;
+  src: url(fonts/signature-font/DancingScript-VariableFont_wght.ttf);
 }
 
 @font-face {
-    font-family: righteous;
-    src: url(fonts/Righteous/Righteous-Regular.ttf);
+  font-family: righteous;
+  src: url(fonts/Righteous/Righteous-Regular.ttf);
 }
 
 @font-face {
-    font-family: barlow;
-    src: url(fonts/Barlow/Barlow-Bold.ttf);
+  font-family: barlow;
+  src: url(fonts/Barlow/Barlow-Bold.ttf);
 }
 
 @font-face {
-    font-family: orbitron;
-    src: url(fonts/Orbitron/Orbitron-VariableFont_wght.ttf)
+  font-family: orbitron;
+  src: url(fonts/Orbitron/Orbitron-VariableFont_wght.ttf)
 }
 
+/******************************* NAVBAR ***************************************/
 .navbar {
-    width: 100vw;
-    height: 15vh;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--purple-main);
-  }
-  
-  .nav-menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-  }
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--purple-main);
+}
 
-  .nav-item {
-      padding: 1em;
-      font-size: 1.5em;
-  }
-  
-  .nav-link {
-    font-family: righteous;
-    text-decoration: none;
-    color: var(--yellow-accent);
-    transition: .4s;
-    padding: .3em;
-    border-radius: 10px;
-    color: var(--yellow-accent);
-    transition: .4s ease-out;
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-item {
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+.nav-link {
+  font-family: righteous;
+  text-decoration: none;
+  color: var(--yellow-accent);
+  transition: .4s;
+  padding: .3em;
+  border-radius: 10px;
+  color: var(--yellow-accent);
+  transition: .4s ease-out;
 }
 
 .nav-link:hover {
-    color: var(--purple-main);
-    background-color: var(--yellow-accent);
-    transition: .4s ease-in;
+  color: var(--purple-main);
+  background-color: var(--yellow-accent);
+  transition: .4s ease-in;
 }
 
 .hamburger {
@@ -132,21 +220,21 @@ html {
 }
 
 .name {
-    display: flex;
-    flex-direction: column;
-    font-size: 3.2em;
-    margin: 1em;
+  display: flex;
+  flex-direction: column;
+  font-size: 3.2em;
+  margin: 1em;
 }
 
 .first-name {
-    display: flex;
-    justify-content: space-between;
-    font-family: righteous;
-    color: var(--white); 
+  display: flex;
+  justify-content: space-between;
+  font-family: righteous;
+  color: var(--white);
 }
 
 .jakob {
-    transition: .6s ease-in;
+  transition: .6s ease-in;
 }
 
 .first-name span {
@@ -155,328 +243,76 @@ html {
 }
 
 .jakob:hover {
-    transform: scale(1.6);
-    color: var(--yellow-accent);
-    transition: .6s ease-out;
-    cursor: pointer;
+  transform: scale(1.6);
+  color: var(--yellow-accent);
+  transition: .6s ease-out;
+  cursor: pointer;
 }
 
 .last-name {
-    font-family: orbitron;
-    letter-spacing: 3px;
-    color: var(--yellow-accent);
-}
-
-#home {
-    background-image: linear-gradient(var(--purple-main), var(--purple-secondary));
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.developer-text, .shavinski {
-    color: var(--yellow-accent);
-}
-
-.home-left, .home-right{
-    margin: 1em;
-    color: var(--white);
-    font-family: righteous;
-    font-size: 2.5em;
-}
-
-.home-right {
-    display: block;
-    border-left: 4px solid var(--yellow-accent);
-    padding-left: 10px;
-}
-
-#about{
-    display: flex;
-    background-color: var(--purple-secondary);
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100vh;
-}
-
-.left-photo {
-    background-image: url(images/6423e2ffc61c5817ddad6270-DeepAgency.png);
-    width: 400px;
-    height: 400px;
-    background-position: center; 
-    background-size: cover;
-    border-radius: 50%;
-    box-shadow: 
-    0 0 0 4px var(--yellow-accent),
-    0 0 0 10px var(--yellow-second),
-    0 0 0 16px white;
-}
-
-
-.right-personal {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.about-me, .project-header {
-    color: var(--yellow-accent);
-    font-family: orbitron;
-    font-size: 3em;
-    font-weight: 900;
-}
-
-.about-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: righteous;
-    gap: 20px;
-    max-width: 95ch;
-
-}
-
-.paragraph {
-    font-size: 1.3em;
-    line-height: 1.5em;
-    color: white;
-}
-
-#projects {
-    height: 100vh;
-    background-color: var(--purple-secondary);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.project-container {
-  margin: 20px 0;
-  border: 5px ridge var(--yellow-accent);
-  background-color: var(--white);
-  width: 55vw;
-  height: 25vh;  
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-}
-
-.project-left {
-  margin: 10px;
-  height: 23vh;
-  width: 23vw;
-  border-radius: 10px;
-}
-
-.project1 {
-  background-image: url(images/project-photos/memorygame-photo.PNG);
-  background-size: contain;
-  border: 3px solid black;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.project2 {
-  background-image: url(images/project-photos/meme-photo.PNG);
-  background-size: contain;
-  border: 3px solid black;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.project3 {
-  background-image: url(images/project-photos/etch-photo.PNG);
-  background-size: contain;
-  border: 3px solid black;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.project-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 20px;
-  height: 80%;
-  width: 70%;
-  font-family: righteous;
-}
-
-.about-project-title {
-  font-size: 1.4em;
-  color: var(--purple-main);
-}
-
-.js {
-  border-radius: 10px;
-  height: 55px;
-  width: 55px;
-}
-
-.tech-used {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.buttons-projects-container {
-  display: flex;
-  align-items: flex-end;
-  margin-top: 30%;
-  margin-right: 10px;
-  gap: 10px;
-}
-
-.button-projects {
-    background-color: var(--yellow-accent);
-    color: var(--purple-secondary);
-    padding: 10px;
-    font-size: 1.3em;
-    font-family: righteous;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    width: 100px;
-    transition: .5s ease-out;
-}
-
-.button-projects:hover {
-  background-color: var(--purple-secondary);
+  font-family: orbitron;
+  letter-spacing: 3px;
   color: var(--yellow-accent);
-  transition: .5s ease-in;
-
 }
 
-#resume {
-    height: 100vh;
-    background-image:linear-gradient(var(--purple-secondary) ,var(--purple-main));
+
+
+
+@media only screen and (max-width: 500px) {
+  #container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#resume-photo {
-    height: 85vh;
-    margin: 2em;
-    box-shadow: 0px 5px 15px 5px var(--purple-white);
-}
-
-.button {
-    background-color: var(--yellow-accent);
-    color: var(--purple-secondary);
-    padding: 10px;
-    font-size: 1.3em;
-    font-family: righteous;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    width: 9em;
-    transition: .8s;
-}
-
-.button:hover {
-    background-color: var(--purple-secondary);
-    color: var(--yellow-accent);
-    cursor: pointer;
-}
-
-#contact {
-    height: 15vh;
-    background-color: var(--purple-main);
-    font-family: righteous;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 1em;
-}
-
-.contact-first, .contact-second {
-    font-size: 3em;
-}
-
-.contact-first {
-    color: var(--white);
-}
-
-.contact-second {
-    color: var(--yellow-accent);
-}
-
-.contact-info{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10em;
-}
-
-.contact-left {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 1.2em;
-    color: var(--white);
-}
-
-.number, .address {
-    color: var(--yellow-accent);
-}
-
-.filter-white {
-    filter: invert(97%) sepia(41%) saturate(4895%) hue-rotate(11deg) brightness(101%) contrast(92%);
-    height: 50px;
-    width: 50px;
-    transition: .5s;
-}
-
-.contact-right {
-    display: flex;
-    flex-direction: row;
-    border-left: 2px solid var(--yellow-accent);
-    gap: 20px;
-    padding-left: 20px;
-}
-
-.linkedin, .github {
-    transition: .3s ease-out;
-}
-
-.linkedin:hover, .github:hover {
-    transform: scale(.95);
-    transition: .3s ease-in;
-}
-
-.contact-heading {
-    font-size: 3em;
-}
-
-@media all and (max-width: 1490px)  {
-    .home-left, .home-right {
-      margin: 1em;
-    }
-  
-    .left-photo {
-      height: 330px;
-      width: 330px;
-    }
-  
-    .right-personal {
-      font-size: .8rem;
-    }
-  
-    .button-projects {
-      width:100px;
-      height: 20px;
-    }
-  
   }
 
-@media all and (max-width: 1201px)  {
+  .jakob-logo {
+    margin-left: 10px;
+  }
+
+  .circle {
+    position: absolute;
+    top: 7px;
+    left: 3px;
+    border: 2px solid var(--yellow-accent);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px
+  }
+
+  /* .ring {
+    position: absolute;
+    top: 7px;
+    left: 3px;
+    border: 2px solid var(--yellow-accent);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    transform: rotate(-45deg) skew(40deg);
+  } */
+
+  .js {
+    font-size: 1.5em;
+    color: var(--yellow-accent);
+    font-family: orbitron;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .name {
+    display: none;
+  }
+
+  #home {
+    /* background-color: var(--purple-secondary); */
+    height: 90vh;
+    display: flex;
+    padding-top: 10vh;
+  }
+
+}
+
+@media all and (max-width: 1201px) {
 
   .navbar.active {
     position: fixed;
@@ -486,7 +322,7 @@ html {
   .nav-menu {
     position: fixed;
     left: -200%;
-    top: 13vh;
+    top: 10vh;
     gap: 0;
     flex-direction: column;
     background-color: var(--purple-main);
@@ -520,222 +356,9 @@ html {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg)
   }
-
-  #about {
-    flex-direction: column;
-  }
-
-  .home-left, .home-right {
-    margin: 1em;
-  }
-
-  .left-photo {
-    height: 300px;
-    width: 300px;
-  }
-
-  .right-personal {
-    font-size: .9em;
-    align-items: center;
-  }
-
-  .project-right img {
-    height: 45px;
-    width: 45px;
-  }
-
-  .project-container {
-    width: 60vw;
-  }
-
-  .buttons-projects-container a {
-    font-size: 1em;
-  }
-
-  /* .button-projects {
-    width:80px;
-    height: 20px;
-  } */
-
-}
-
-@media all and (max-width:1025px) {
-      .left-photo {
-        height: 270px;
-        width: 270px;
-      }
-
-      .right-personal {
-        margin: 20px;
-      }
-    
-      .button-projects {
-        width:80px;
-        height: 20px;
-      }
-      .project-container {
-        width: 75vw;
-      }
-  
-      #resume-photo {
-        height: 70vh;
-        width: 65vw;
-      }
-}
-
-@media all and (max-width:768px) {
-      .name {
-        font-size: 2.5em;
-      }
-
-      .home-left, .home-right {
-        font-size: 2.1em;
-        margin: .5em;
-      }
-
-      .left-photo {
-        height: 220px;
-        width: 220px;
-      }
-
-      .right-personal {
-        margin: 20px;
-      }
-    
-      .project-container {
-        width: 85vw;
-      }
-
-      .project1, .project2, .project3 {
-        height: 15vh;
-        width: 20vw;
-      }
-
-      .tech-left img {
-        width: 35px;
-        height: 35px;
-      }
-
-      .buttons-projects-container {
-        margin-top: 30%;
-      }
-
-      .buttons-projects-container a{
-        font-size: .7em;
-        margin-top: 14%;
-      }
-
-
-      .button-projects {
-        width: 50px;
-        height: 10px;
-        font-size: .8em;
-      }
-
-      #resume-photo {
-        display: none;
-      }
-
-      #resume {
-        height: 10vh;
-      }
-
-      .contact-info {
-        gap: 6px;
-      }
-
-      .contact-left {
-        font-size: .9em;
-      }
-
-
-}
-
-@media all and (max-width:480px) {
-      .name {
-        font-size: 2em;
-        margin: .4em;
-      }
-
-      #home {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        font-size: 1.2em;
-      }
-
-      .home-right {
-        border-left: none;
-        padding-left: 0px;
-      }
-
-      .home-left, .home-right {
-        font-size: 1.5em;
-        margin: .5em;
-      }
-
-      .left-photo {
-        width: 130px;
-        height: 130px;
-      }
-
-      .about-me {
-        font-size: 1.2em;
-      }
-
-      .right-personal {
-        font-size: .7em;
-      }
-
-      .project-header {
-        font-size: 1.2em;
-      }
-
-      .buttons-projects-container a {
-        font-size: .7em;
-      }
-
-      .buttons-projects-container {
-        margin-top: 10%;
-    }
-
-      .about-project-title {
-        font-size: 1em;
-      }
-
-      .about-project-info {
-        font-size: .8em;
-      }
-
-      .tech-left img {
-        width: 25px;
-        height: 25px;
-      }
-  
-      #resume-photo {
-        display: none;
-      }
-
-      #resume {
-        height: 10vh;
-      }
-
-      #contact {
-        height: 18vh;
-        gap: 40px;
-      }
-
-      .contact-first, .contact-second {
-        font-size: 1.5em;
-      }
-
-      .contact-left {
-        font-size: .8em;
-      }
-
-      .github, .linkedin {
-        width: 100%;
-      }
 }
 
 
+
+
+/******************************************************************************/
